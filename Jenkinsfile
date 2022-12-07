@@ -24,7 +24,7 @@ pipeline {
             steps {
                 echo 'Student Number: A01205739'
                 echo 'Group Number: 4'
-                sh 'ls | wc -l *.py'
+                sh 'ls | wc -l'
             }
         }
         
@@ -33,7 +33,7 @@ pipeline {
                 expression { params.TEST }
             }
             steps {
-                sh 'python3 –m unittest test_point_manager.py'
+                sh 'python3 unittest test_point_manage.py'
                 }
             post {
                 always {
