@@ -24,7 +24,7 @@ pipeline {
             steps {
                 echo 'Student Number: A01205739'
                 echo 'Group Number: 4'
-                sh 'ls | wc -l'
+                sh 'ls *.py | wc -l'
             }
         }
         
