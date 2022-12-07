@@ -1,6 +1,6 @@
 // 4850 Final Practical
 // Agnes Ko, A01205739
-// Pipeline 
+// Pipeline installing required modules, checking lint, quantity of python files, running tests, and archiving artifacts
 pipeline {
     agent any
     parameters {
@@ -33,7 +33,7 @@ pipeline {
                 expression { params.TEST }
             }
             steps {
-                sh 'python3 unittest test_*.py'
+                sh 'python3 -m unittest test_*.py'
                 }
             post {
                 always {
