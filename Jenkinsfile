@@ -33,7 +33,7 @@ pipeline {
                 expression { params.TEST }
             }
             steps {
-                sh 'python3 unittest test_point_manager.py'
+                sh 'python3 unittest test_*.py'
                 }
             post {
                 always {
