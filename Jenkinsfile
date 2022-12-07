@@ -37,7 +37,7 @@ pipeline {
                 }
             post {
                 always {
-                    sh 'ls
+                    sh 'ls'
                     junit 'test-reports/*.xml'
                 }   
             }
